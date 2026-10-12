@@ -1,0 +1,192 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+10 seeds x 7 gaps x 6 variants in 88 s
+
+gap    variant         both%% mean±std      FP mean±std
+6      fixed-14           79.2 ±   2.6    196.2 ±  16.5
+6      union              78.4 ±   2.3    306.9 ±  22.9
+6      intersection       89.2 ±   1.8    154.1 ±   6.9
+6      corroborated       83.6 ±   2.2    231.1 ±  24.3
+6      fixed-8            79.0 ±   2.3    207.7 ±  15.4
+6      fixed-20           88.2 ±   2.4    229.1 ±  23.8
+
+8      fixed-14           33.0 ±   3.5    262.0 ±  26.4
+8      union              32.9 ±   3.5    362.4 ±  25.3
+8      intersection       99.6 ±   0.3    213.1 ±  21.8
+8      corroborated       33.5 ±   3.6    277.4 ±  18.3
+8      fixed-8            99.5 ±   0.4    270.0 ±  19.4
+8      fixed-20           33.6 ±   3.7    275.2 ±  18.4
+
+10     fixed-14           24.1 ±   3.3    243.7 ±  17.6
+10     union              18.7 ±   2.0    354.1 ±  30.7
+10     intersection      100.0 ±   0.1    188.8 ±  10.9
+10     corroborated       18.7 ±   2.1    269.5 ±  27.1
+10     fixed-8           100.0 ±   0.1    248.2 ±  14.1
+10     fixed-20           18.7 ±   2.1    266.7 ±  28.4
+
+12     fixed-14           87.4 ±   4.0    236.8 ±  11.7
+12     union              12.3 ±   2.0    409.1 ±  19.6
+12     intersection       99.8 ±   0.3    181.0 ±  14.4
+12     corroborated       12.4 ±   2.0    321.6 ±  22.9
+12     fixed-8            99.8 ±   0.3    240.4 ±  14.9
+12     fixed-20           12.4 ±   2.0    319.1 ±  22.6
+
+14     fixed-14          100.0 ±   0.0    224.1 ±  19.7
+14     union              10.4 ±   1.9    477.3 ±  34.7
+14     intersection      100.0 ±   0.0    174.5 ±  12.5
+14     corroborated       10.4 ±   2.0    387.8 ±  21.4
+14     fixed-8           100.0 ±   0.0    232.1 ±  17.5
+14     fixed-20           10.4 ±   2.0    385.9 ±  20.7
+
+16     fixed-14          100.0 ±   0.1    223.1 ±  19.3
+16     union              58.3 ±  10.2    424.7 ±  50.5
+16     intersection       99.9 ±   0.2    175.4 ±  10.9
+16     corroborated       58.7 ±  10.5    333.9 ±  40.9
+16     fixed-8            99.9 ±   0.2    239.8 ±  16.0
+16     fixed-20           58.7 ±  10.5    330.7 ±  39.7
+
+24     fixed-14           99.9 ±   0.2    214.0 ±  19.8
+24     union              99.9 ±   0.2    314.8 ±  32.2
+24     intersection       99.9 ±   0.2    170.7 ±   9.5
+24     corroborated       99.9 ±   0.2    239.2 ±  24.0
+24     fixed-8            99.9 ±   0.2    224.1 ±  12.7
+24     fixed-20           99.9 ±   0.2    238.6 ±  23.7
+
+=== Claim tests over 70 (seed, gap) pairs ===
+intersection FP < every single scale          :  70 / 70
+intersection both% >= best single scale - 1   :  69 / 70
+intersection both% > fixed-14 + 1             :  40 / 70
+intersection both% < fixed-14 - 1             :   0 / 70
+corr(rows with 2+ runs, both resolved), all cases: r = 0.863 (n = 420)
+
+Saved fig6e_robustness_summary.csv, fig6e_robustness_raw.csv, fig6e_robustness.png
+scale  6: tau_ROM = 0.1855 (n=180075)
+scale  6: tau 0.1855  alpha 5.953  gate pos 7.66e-04 neg 9.83e-04
+scale 10: tau_ROM = 0.3903 (n=168507)
+scale 10: tau 0.3903  alpha 5.315  gate pos 8.55e-04 neg 7.12e-04
+scales [6 8 10 14 20]  tau [0.1855 0.2887 0.3903 0.4956 0.6263]
+done in 40 s
+
+set \\ gap              6        8       10       12       14       16       24    mean FP
+AND[8 14 20]         89.2     99.6    100.0     99.8    100.0     99.9     99.9      179.7
+AND[10 14 20]        88.9     55.1     99.9     99.8    100.0     99.9     99.9      180.9
+AND[14 20]           89.0     33.7     24.5     87.4    100.0    100.0     99.9      190.0
+AND[6 10 14]         99.7     99.7    100.0     99.8    100.0    100.0     99.9      179.3
+AND[8 14]            79.0     99.5    100.0     99.8    100.0     99.9     99.9      181.8
+AND[8 20]            89.3     99.6    100.0     99.8    100.0     99.9     99.9      181.4
+AND[6 14 20]         99.9     99.7    100.0     99.8    100.0    100.0     99.9      179.2
+fixed-6              99.7     99.7    100.0     99.8    100.0    100.0     99.9      238.5
+fixed-8              79.0     99.5    100.0     99.8    100.0     99.9     99.9      237.5
+fixed-10             78.3     54.3     99.7     99.8    100.0     99.9     99.9      262.6
+fixed-14             79.2     33.0     24.1     87.4    100.0    100.0     99.9      228.6
+fixed-20             88.2     33.6     18.7     12.4     10.4     58.7     99.9      292.2
+(cells: both resolved %, mean over 10 seeds)
+
+set                  mean both%      min both%      mean FP
+AND[8 14 20]               98.3           89.2        179.7
+AND[10 14 20]              91.9           55.1        180.9
+AND[14 20]                 76.4           24.5        190.0
+AND[6 10 14]               99.9           99.7        179.3
+AND[8 14]                  96.9           79.0        181.8
+AND[8 20]                  98.3           89.3        181.4
+AND[6 14 20]               99.9           99.7        179.2
+fixed-6                    99.9           99.7        238.5
+fixed-8                    96.9           79.0        237.5
+fixed-10                   90.3           54.3        262.6
+fixed-14                   74.8           24.1        228.6
+fixed-20                   46.0           10.4        292.2
+
+min both% = worst gap after averaging over seeds.
+Sets without 8 px ([10 14 20], [14 20]) answer the real-data question.
+Saved scale_sets_summary.csv, scale_sets.png
+=== False-alarm gate per CFAR variant ===
+orig  s= 8  pos 9.96e-04  neg 9.60e-04  ok
+orig  s=14  pos 1.17e-03  neg 1.01e-03  ok
+orig  s=20  pos 1.15e-03  neg 9.66e-04  ok
+g0    s= 8  pos 1.21e-03  neg 9.42e-04  ok
+g0    s=14  pos 1.31e-03  neg 1.01e-03  ok
+g0    s=20  pos 1.21e-03  neg 9.88e-04  ok
+g1    s= 8  pos 1.25e-03  neg 9.23e-04  ok
+g1    s=14  pos 1.35e-03  neg 1.03e-03  ok
+g1    s=20  pos 1.15e-03  neg 9.88e-04  ok
+g2    s= 8  pos 1.16e-03  neg 9.23e-04  ok
+g2    s=14  pos 1.31e-03  neg 1.01e-03  ok
+g2    s=20  pos 1.24e-03  neg 9.88e-04  ok
+
+=== CFAR orig ===
+Fig6b  fixed-14      FN    2  FP   278  TPR   99.2
+Fig6b  intersection  FN   12  FP   221  TPR   95.3
+Fig6c  fixed-14      FN   36  FP   351  TPR   85.9
+Fig6c  intersection  FN   24  FP   317  TPR   90.6
+Fig6a  fixed-14      FN    0  FP   250  TPR  100.0
+Fig6a  intersection  FN    0  FP   187  TPR  100.0
+Fig6d  fixed-14      bound 100.0  bright  99.6  dark  90.6  FP   363
+Fig6d  intersection  bound 100.0  bright  99.2  dark  91.8  FP   344
+
+=== CFAR g0 ===
+Fig6b  fixed-14      FN    1  FP   298  TPR   99.6
+Fig6b  intersection  FN    9  FP   241  TPR   96.5
+Fig6c  fixed-14      FN   35  FP   355  TPR   86.3
+Fig6c  intersection  FN   24  FP   321  TPR   90.6
+Fig6a  fixed-14      FN    0  FP   266  TPR  100.0
+Fig6a  intersection  FN    0  FP   202  TPR  100.0
+Fig6d  fixed-14      bound 100.0  bright  99.6  dark  91.0  FP   378
+Fig6d  intersection  bound 100.0  bright  99.2  dark  92.2  FP   359
+
+=== CFAR g1 ===
+Fig6b  fixed-14      FN    1  FP   279  TPR   99.6
+Fig6b  intersection  FN    6  FP   222  TPR   97.7
+Fig6c  fixed-14      FN   36  FP   345  TPR   85.9
+Fig6c  intersection  FN   24  FP   310  TPR   90.6
+Fig6a  fixed-14      FN    0  FP   279  TPR  100.0
+Fig6a  intersection  FN    0  FP   215  TPR  100.0
+Fig6d  fixed-14      bound 100.0  bright  99.6  dark  90.6  FP   397
+Fig6d  intersection  bound 100.0  bright  99.2  dark  92.2  FP   378
+
+=== CFAR g2 ===
+Fig6b  fixed-14      FN    2  FP   277  TPR   99.2
+Fig6b  intersection  FN    6  FP   221  TPR   97.7
+Fig6c  fixed-14      FN   36  FP   362  TPR   85.9
+Fig6c  intersection  FN   24  FP   328  TPR   90.6
+Fig6a  fixed-14      FN    0  FP   293  TPR  100.0
+Fig6a  intersection  FN    0  FP   230  TPR  100.0
+Fig6d  fixed-14      bound 100.0  bright  99.6  dark  90.6  FP   419
+Fig6d  intersection  bound 100.0  bright  99.2  dark  91.8  FP   400
+
+Published Fig 6c: FN 0 / FP 641 / TPR 100.
+If a guard variant lifts Fig6c TPR toward 100 without breaking Fig6b
+or inflating FP, the full-window CFAR explains the shortfall.
+Saved cfar_guard_6abc.csv, cfar_guard_6d.csv
+=== Fig 6a/b/c ===
+method           image      FN       FP    TPR%
+sobel-unthinned  Fig6a      63     3984    75.4
+sobel            Fig6a      58     3499    77.3
+log              Fig6a       6     7760    97.7
+canny            Fig6a       5    10473    98.0
+sobel-unthinned  Fig6b       1      437    99.6
+sobel            Fig6b       2      376    99.2
+log              Fig6b       2     9741    99.2
+canny            Fig6b       2    18516    99.2
+sobel-unthinned  Fig6c     215     1246    16.0
+sobel            Fig6c     210     1166    18.0
+log              Fig6c       7    11698    97.3
+canny            Fig6c       2    19577    99.2
+
+=== Fig 6d ===
+sobel-unthinned  bound  75.8  bright   0.0  dark  87.5  FP   3465
+sobel            bound  75.4  bright   0.0  dark  88.7  FP   3032
+log              bound  99.2  bright  99.2  dark  98.8  FP   6922
+canny            bound  99.2  bright  99.2  dark  99.2  FP   9566
+
+=== Fig 6e (single realisation): both resolved % / FP ===
+method \\ gap               6            8           10           12           14           16           24
+sobel-unthinned   100.0/0      100.0/367    100.0/741    100.0/1065   100.0/1360    99.6/1718    99.6/2654 
+sobel              98.8/0       99.2/193     98.4/388     99.6/565     98.4/748     98.4/953     98.0/1612 
+log                99.2/1700    98.0/1702    99.2/1777    97.3/1578    98.0/1677    97.3/1571    97.7/1709 
+canny              98.8/14184   99.2/10432   99.2/4353    98.8/16643   98.8/15267   97.7/16275   98.8/4208 
+
+Saved classical_6abc.csv, classical_6d.csv, classical_6e.csv
+
+READ TPR ONLY TOGETHER WITH FP. A method that marks most of the image
+scores high TPR and high "both resolved" by flooding, not by detecting.
+Update the Introduction: use the thinned sobel FP for Fig6a.

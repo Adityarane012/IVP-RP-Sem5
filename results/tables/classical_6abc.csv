@@ -1,0 +1,13 @@
+Method,Image,FN,FP,TPR
+sobel-unthinned,Fig6a,63,3984,75.390625
+sobel,Fig6a,58,3499,77.343750
+log,Fig6a,6,7760,97.656250
+canny,Fig6a,5,10473,98.046875
+sobel-unthinned,Fig6b,1,437,99.609375
+sobel,Fig6b,2,376,99.218750
+log,Fig6b,2,9741,99.218750
+canny,Fig6b,2,18516,99.218750
+sobel-unthinned,Fig6c,215,1246,16.015625
+sobel,Fig6c,210,1166,17.968750
+log,Fig6c,7,11698,97.265625
+canny,Fig6c,2,19577,99.218750

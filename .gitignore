@@ -1,0 +1,55 @@
+# Only this project's exclusions. Everything else is published, including
+# every .m and .py file in code/.
+
+
+# ---------------------------------------------------------------------
+#  The Umbra scenes
+# ---------------------------------------------------------------------
+#  3.08 GB across 9 GeoTIFFs. Six are over GitHub's 100 MB hard file
+#  limit, the largest 570 MB. They are public, so the README gives the
+#  names and the download link instead of re-hosting them:
+#
+#      Umbra Open Data, CC BY 4.0
+#      https://umbra.space/open-data
+#
+#  Everything derived from them IS published, so the work reproduces
+#  without the 3 GB: data/previews/ and data/crops/.
+#
+data/raw/
+
+
+# ---------------------------------------------------------------------
+#  Working material, kept locally and not published
+# ---------------------------------------------------------------------
+/paper/
+_quarantine_2026-10-12/
+
+
+# ---------------------------------------------------------------------
+#  MATLAB Project metadata
+# ---------------------------------------------------------------------
+#  83 machine-generated XML files that only the MATLAB Project feature
+#  reads. No script in this repository uses it. The MATLAB code itself,
+#  every .m file in code/ and code/figures_code/, is published.
+#
+code/resources/
+code/src.prj
+
+
+# ---------------------------------------------------------------------
+#  Published on purpose, listed so nothing excludes them later
+# ---------------------------------------------------------------------
+#      code/*.m              the 15 MATLAB scripts and the library
+#      code/figures_code/    the 7 figure scripts
+#      code/*.py             the 4 Python tools
+#      code/results_*.csv    the regression gate's baseline. A missing
+#                            baseline is a hard failure, not a skip
+#      data/crops.csv        the crop definitions
+#      data/crops/           globbed by real_calibrate_neg.m,
+#                            real_channels.m, real_detect.m and
+#                            refine_calib.py
+#      data/previews/        one preview image per scene
+#      data/simulated/       the saved test images the figures are
+#                            redrawn from, with no new random numbers
+#      results/tables/       the 19 frozen CSVs every reported number
+#                            is taken from

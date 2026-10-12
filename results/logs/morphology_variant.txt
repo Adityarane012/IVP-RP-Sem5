@@ -1,0 +1,61 @@
+image  variant       morph            FN     FP    TPR
+Fig6a  fixed-14      none              0    250  100.0
+Fig6a  fixed-14      open-5            1      0   99.6
+Fig6a  fixed-14      open-10           6      0   97.7
+Fig6a  fixed-14      open-20           6      0   97.7
+Fig6a  fixed-14      close+open10      0      0  100.0
+Fig6a  intersection  none              0    187  100.0
+Fig6a  intersection  open-5            1      0   99.6
+Fig6a  intersection  open-10           6      0   97.7
+Fig6a  intersection  open-20           6      0   97.7
+Fig6a  intersection  close+open10      0      0  100.0
+Fig6b  fixed-14      none              2    278   99.2
+Fig6b  fixed-14      open-5            8      0   96.9
+Fig6b  fixed-14      open-10           9      0   96.5
+Fig6b  fixed-14      open-20          46      0   82.0
+Fig6b  fixed-14      close+open10      1     24   99.6
+Fig6b  intersection  none             12    221   95.3
+Fig6b  intersection  open-5           36      0   85.9
+Fig6b  intersection  open-10          58      0   77.3
+Fig6b  intersection  open-20         138      0   46.1
+Fig6b  intersection  close+open10     19      9   92.6
+Fig6c  fixed-14      none             36    351   85.9
+Fig6c  fixed-14      open-5          171      9   33.2
+Fig6c  fixed-14      open-10         226      0   11.7
+Fig6c  fixed-14      open-20         256      0    0.0
+Fig6c  fixed-14      close+open10    143     24   44.1
+Fig6c  intersection  none             24    317   90.6
+Fig6c  intersection  open-5          183     17   28.5
+Fig6c  intersection  open-10         256      0    0.0
+Fig6c  intersection  open-20         256      0    0.0
+Fig6c  intersection  close+open10    158     22   38.3
+
+=== Fig6d ===
+fixed-14      none          bound 100.0 bright  99.6 dark  90.6 FP   363
+fixed-14      open-5        bound 100.0 bright  99.6 dark  33.2 FP     6
+fixed-14      open-10       bound 100.0 bright  99.6 dark   8.2 FP     0
+fixed-14      open-20       bound 100.0 bright  97.3 dark   0.0 FP     0
+fixed-14      close+open10  bound 100.0 bright 100.0 dark  43.8 FP    39
+intersection  none          bound 100.0 bright  99.2 dark  91.8 FP   344
+intersection  open-5        bound 100.0 bright  99.2 dark  21.5 FP     8
+intersection  open-10       bound 100.0 bright  99.2 dark   6.6 FP     2
+intersection  open-20       bound 100.0 bright  94.9 dark   0.0 FP     1
+intersection  close+open10  bound 100.0 bright 100.0 dark  52.0 FP    59
+
+=== Fig6e: both resolved % / FP ===
+gap  6 fixed-14       none  82.8/205   open-5  68.0/0     open-10  64.8/0     open-20  63.3/0     close+open10  84.4/0   
+gap  6 intersection   none  91.0/166   open-5  85.5/0     open-10  82.4/0     open-20  82.4/0     close+open10  94.1/0   
+gap  8 fixed-14       none  30.9/273   open-5   0.8/3     open-10   0.0/0     open-20   0.0/0     close+open10   5.9/22  
+gap  8 intersection   none  99.6/215   open-5  99.2/7     open-10  99.2/7     open-20  99.2/7     close+open10 100.0/29  
+gap 10 fixed-14       none  23.4/228   open-5   5.1/9     open-10   4.3/0     open-20   0.0/0     close+open10   4.7/10  
+gap 10 intersection   none  99.6/164   open-5  97.7/0     open-10  97.7/0     open-20  93.4/0     close+open10 100.0/0   
+gap 12 fixed-14       none  92.6/241   open-5  88.3/0     open-10  88.3/0     open-20  87.9/0     close+open10  88.3/1   
+gap 12 intersection   none 100.0/190   open-5 100.0/0     open-10 100.0/0     open-20 100.0/0     close+open10 100.0/1   
+gap 14 fixed-14       none 100.0/173   open-5  99.6/0     open-10  99.6/0     open-20  99.6/0     close+open10 100.0/0   
+gap 14 intersection   none 100.0/147   open-5  99.2/0     open-10  99.2/0     open-20  99.2/0     close+open10  99.6/0   
+gap 16 fixed-14       none 100.0/237   open-5  98.0/0     open-10  96.5/0     open-20  96.5/0     close+open10  99.6/0   
+gap 16 intersection   none 100.0/180   open-5  97.7/0     open-10  93.0/0     open-20  93.0/0     close+open10  99.6/0   
+gap 24 fixed-14       none  99.6/201   open-5  97.3/0     open-10  94.9/0     open-20  88.3/0     close+open10  96.5/0   
+gap 24 intersection   none 100.0/162   open-5  97.7/0     open-10  95.3/0     open-20  88.7/0     close+open10  96.9/0   
+
+Saved morphology_6abc.csv, morphology_6d.csv, morphology_6e.csv

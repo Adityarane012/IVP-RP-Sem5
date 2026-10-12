@@ -1,0 +1,62 @@
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 8 workers.
+10 seeds x 7 gaps x 6 variants in 46 s
+
+gap    variant         both%% mean±std      FP mean±std
+6      fixed-14           79.2 ±   2.6    196.2 ±  16.5
+6      union              78.4 ±   2.3    306.9 ±  22.9
+6      intersection       89.2 ±   1.8    154.1 ±   6.9
+6      corroborated       83.6 ±   2.2    231.1 ±  24.3
+6      fixed-8            79.0 ±   2.3    207.7 ±  15.4
+6      fixed-20           88.2 ±   2.4    229.1 ±  23.8
+
+8      fixed-14           33.0 ±   3.5    262.0 ±  26.4
+8      union              32.9 ±   3.5    362.4 ±  25.3
+8      intersection       99.6 ±   0.3    213.1 ±  21.8
+8      corroborated       33.5 ±   3.6    277.4 ±  18.3
+8      fixed-8            99.5 ±   0.4    270.0 ±  19.4
+8      fixed-20           33.6 ±   3.7    275.2 ±  18.4
+
+10     fixed-14           24.1 ±   3.3    243.7 ±  17.6
+10     union              18.7 ±   2.0    354.1 ±  30.7
+10     intersection      100.0 ±   0.1    188.8 ±  10.9
+10     corroborated       18.7 ±   2.1    269.5 ±  27.1
+10     fixed-8           100.0 ±   0.1    248.2 ±  14.1
+10     fixed-20           18.7 ±   2.1    266.7 ±  28.4
+
+12     fixed-14           87.4 ±   4.0    236.8 ±  11.7
+12     union              12.3 ±   2.0    409.1 ±  19.6
+12     intersection       99.8 ±   0.3    181.0 ±  14.4
+12     corroborated       12.4 ±   2.0    321.6 ±  22.9
+12     fixed-8            99.8 ±   0.3    240.4 ±  14.9
+12     fixed-20           12.4 ±   2.0    319.1 ±  22.6
+
+14     fixed-14          100.0 ±   0.0    224.1 ±  19.7
+14     union              10.4 ±   1.9    477.3 ±  34.7
+14     intersection      100.0 ±   0.0    174.5 ±  12.5
+14     corroborated       10.4 ±   2.0    387.8 ±  21.4
+14     fixed-8           100.0 ±   0.0    232.1 ±  17.5
+14     fixed-20           10.4 ±   2.0    385.9 ±  20.7
+
+16     fixed-14          100.0 ±   0.1    223.1 ±  19.3
+16     union              58.3 ±  10.2    424.7 ±  50.5
+16     intersection       99.9 ±   0.2    175.4 ±  10.9
+16     corroborated       58.7 ±  10.5    333.9 ±  40.9
+16     fixed-8            99.9 ±   0.2    239.8 ±  16.0
+16     fixed-20           58.7 ±  10.5    330.7 ±  39.7
+
+24     fixed-14           99.9 ±   0.2    214.0 ±  19.8
+24     union              99.9 ±   0.2    314.8 ±  32.2
+24     intersection       99.9 ±   0.2    170.7 ±   9.5
+24     corroborated       99.9 ±   0.2    239.2 ±  24.0
+24     fixed-8            99.9 ±   0.2    224.1 ±  12.7
+24     fixed-20           99.9 ±   0.2    238.6 ±  23.7
+
+=== Claim tests over 70 (seed, gap) pairs ===
+intersection FP < every single scale          :  70 / 70
+intersection both% >= best single scale - 1   :  69 / 70
+intersection both% > fixed-14 + 1             :  40 / 70
+intersection both% < fixed-14 - 1             :   0 / 70
+corr(rows with 2+ runs, both resolved), all cases: r = 0.863 (n = 420)
+
+Saved fig6e_robustness_summary.csv, fig6e_robustness_raw.csv, fig6e_robustness.png

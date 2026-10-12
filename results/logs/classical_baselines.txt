@@ -1,0 +1,33 @@
+=== Fig 6a/b/c ===
+method           image      FN       FP    TPR%
+sobel-unthinned  Fig6a      63     3984    75.4
+sobel            Fig6a      58     3499    77.3
+log              Fig6a       6     7760    97.7
+canny            Fig6a       5    10473    98.0
+sobel-unthinned  Fig6b       1      437    99.6
+sobel            Fig6b       2      376    99.2
+log              Fig6b       2     9741    99.2
+canny            Fig6b       2    18516    99.2
+sobel-unthinned  Fig6c     215     1246    16.0
+sobel            Fig6c     210     1166    18.0
+log              Fig6c       7    11698    97.3
+canny            Fig6c       2    19577    99.2
+
+=== Fig 6d ===
+sobel-unthinned  bound  75.8  bright   0.0  dark  87.5  FP   3465
+sobel            bound  75.4  bright   0.0  dark  88.7  FP   3032
+log              bound  99.2  bright  99.2  dark  98.8  FP   6922
+canny            bound  99.2  bright  99.2  dark  99.2  FP   9566
+
+=== Fig 6e (single realisation): both resolved % / FP ===
+method \\ gap               6            8           10           12           14           16           24
+sobel-unthinned   100.0/0      100.0/367    100.0/741    100.0/1065   100.0/1360    99.6/1718    99.6/2654 
+sobel              98.8/0       99.2/193     98.4/388     99.6/565     98.4/748     98.4/953     98.0/1612 
+log                99.2/1700    98.0/1702    99.2/1777    97.3/1578    98.0/1677    97.3/1571    97.7/1709 
+canny              98.8/14184   99.2/10432   99.2/4353    98.8/16643   98.8/15267   97.7/16275   98.8/4208 
+
+Saved classical_6abc.csv, classical_6d.csv, classical_6e.csv
+
+READ TPR ONLY TOGETHER WITH FP. A method that marks most of the image
+scores high TPR and high "both resolved" by flooding, not by detecting.
+Update the Introduction: use the thinned sobel FP for Fig6a.

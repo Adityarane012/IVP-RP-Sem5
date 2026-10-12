@@ -1,0 +1,13 @@
+Image,Variant,FN,FP,TPR
+Fig6a,fixed-14,0,250,100
+Fig6a,union,0,368,100
+Fig6a,intersection,0,187,100
+Fig6a,corroborated,0,271,100
+Fig6b,fixed-14,2,278,99.218750
+Fig6b,union,3,441,98.828125
+Fig6b,intersection,12,221,95.312500
+Fig6b,corroborated,4,380,98.437500
+Fig6c,fixed-14,36,351,85.937500
+Fig6c,union,60,447,76.562500
+Fig6c,intersection,24,317,90.625000
+Fig6c,corroborated,48,412,81.250000

@@ -1,0 +1,58 @@
+=== False-alarm gate per CFAR variant ===
+orig  s= 8  pos 9.96e-04  neg 9.60e-04  ok
+orig  s=14  pos 1.17e-03  neg 1.01e-03  ok
+orig  s=20  pos 1.15e-03  neg 9.66e-04  ok
+g0    s= 8  pos 1.21e-03  neg 9.42e-04  ok
+g0    s=14  pos 1.31e-03  neg 1.01e-03  ok
+g0    s=20  pos 1.21e-03  neg 9.88e-04  ok
+g1    s= 8  pos 1.25e-03  neg 9.23e-04  ok
+g1    s=14  pos 1.35e-03  neg 1.03e-03  ok
+g1    s=20  pos 1.15e-03  neg 9.88e-04  ok
+g2    s= 8  pos 1.16e-03  neg 9.23e-04  ok
+g2    s=14  pos 1.31e-03  neg 1.01e-03  ok
+g2    s=20  pos 1.24e-03  neg 9.88e-04  ok
+
+=== CFAR orig ===
+Fig6b  fixed-14      FN    2  FP   278  TPR   99.2
+Fig6b  intersection  FN   12  FP   221  TPR   95.3
+Fig6c  fixed-14      FN   36  FP   351  TPR   85.9
+Fig6c  intersection  FN   24  FP   317  TPR   90.6
+Fig6a  fixed-14      FN    0  FP   250  TPR  100.0
+Fig6a  intersection  FN    0  FP   187  TPR  100.0
+Fig6d  fixed-14      bound 100.0  bright  99.6  dark  90.6  FP   363
+Fig6d  intersection  bound 100.0  bright  99.2  dark  91.8  FP   344
+
+=== CFAR g0 ===
+Fig6b  fixed-14      FN    1  FP   298  TPR   99.6
+Fig6b  intersection  FN    9  FP   241  TPR   96.5
+Fig6c  fixed-14      FN   35  FP   355  TPR   86.3
+Fig6c  intersection  FN   24  FP   321  TPR   90.6
+Fig6a  fixed-14      FN    0  FP   266  TPR  100.0
+Fig6a  intersection  FN    0  FP   202  TPR  100.0
+Fig6d  fixed-14      bound 100.0  bright  99.6  dark  91.0  FP   378
+Fig6d  intersection  bound 100.0  bright  99.2  dark  92.2  FP   359
+
+=== CFAR g1 ===
+Fig6b  fixed-14      FN    1  FP   279  TPR   99.6
+Fig6b  intersection  FN    6  FP   222  TPR   97.7
+Fig6c  fixed-14      FN   36  FP   345  TPR   85.9
+Fig6c  intersection  FN   24  FP   310  TPR   90.6
+Fig6a  fixed-14      FN    0  FP   279  TPR  100.0
+Fig6a  intersection  FN    0  FP   215  TPR  100.0
+Fig6d  fixed-14      bound 100.0  bright  99.6  dark  90.6  FP   397
+Fig6d  intersection  bound 100.0  bright  99.2  dark  92.2  FP   378
+
+=== CFAR g2 ===
+Fig6b  fixed-14      FN    2  FP   277  TPR   99.2
+Fig6b  intersection  FN    6  FP   221  TPR   97.7
+Fig6c  fixed-14      FN   36  FP   362  TPR   85.9
+Fig6c  intersection  FN   24  FP   328  TPR   90.6
+Fig6a  fixed-14      FN    0  FP   293  TPR  100.0
+Fig6a  intersection  FN    0  FP   230  TPR  100.0
+Fig6d  fixed-14      bound 100.0  bright  99.6  dark  90.6  FP   419
+Fig6d  intersection  bound 100.0  bright  99.2  dark  91.8  FP   400
+
+Published Fig 6c: FN 0 / FP 641 / TPR 100.
+If a guard variant lifts Fig6c TPR toward 100 without breaking Fig6b
+or inflating FP, the full-window CFAR explains the shortfall.
+Saved cfar_guard_6abc.csv, cfar_guard_6d.csv

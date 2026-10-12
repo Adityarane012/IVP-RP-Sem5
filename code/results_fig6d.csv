@@ -1,0 +1,5 @@
+Image,Variant,BoundaryTPR,BrightTPR,DarkTPR,FP
+Fig6d,fixed-14,100,99.609375,90.625,363
+Fig6d,union,100,99.609375,78.90625,410
+Fig6d,intersection,100,99.21875,91.796875,344
+Fig6d,corroborated,100,99.609375,85.15625,432

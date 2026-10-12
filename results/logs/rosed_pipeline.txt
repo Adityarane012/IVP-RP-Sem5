@@ -1,0 +1,67 @@
+=== Section 1: Simulator verification ===
+mean power   target 0.1000 | actual 0.0999
+amplitude CV target 0.5227 | actual 0.5227
+intensity CV target 1.0000 | actual 0.9993
+
+=== Section 2: Test images ===
+
+=== Section 3: ROM calibration ===
+scale  8: tau_ROM = 0.2887 (n=174243)
+scale 14: tau_ROM = 0.4956 (n=157323)
+scale 20: tau_ROM = 0.6263 (n=141267)
+
+ scale        tau  alpha_pos    alpha_neg
+     8     0.2887     5.5096   7.3396e-04
+    14     0.4956     5.1498   7.2570e-04
+    20     0.6263     5.0641   7.2366e-04
+
+=== Section 4: CFAR calibration check ===
+scale  8: pos=6.89e-04  neg=9.99e-04  (target 1.0e-03)
+scale 14: pos=1.01e-03  neg=8.77e-04  (target 1.0e-03)
+scale 20: pos=7.43e-04  neg=8.07e-04  (target 1.0e-03)
+GATE PASSED.
+
+=== Section 5: Reproduction (Fig 6a/b/c) ===
+
+--- Fig6a ---
+variant              FN         FP     TPR%
+fixed-14              0        250    100.0
+union                 0        368    100.0
+intersection          0        187    100.0
+corroborated          0        271    100.0
+
+--- Fig6b ---
+variant              FN         FP     TPR%
+fixed-14              2        278     99.2
+union                 3        441     98.8
+intersection         12        221     95.3
+corroborated          4        380     98.4
+
+--- Fig6c ---
+variant              FN         FP     TPR%
+fixed-14             36        351     85.9
+union                60        447     76.6
+intersection         24        317     90.6
+corroborated         48        412     81.2
+
+=== Section 5b: Mixed scene Fig6d ===
+variant          bound TPR  bright TPR    dark TPR         FP
+fixed-14             100.0        99.6        90.6        363
+union                100.0        99.6        78.9        410
+intersection         100.0        99.2        91.8        344
+corroborated         100.0        99.6        85.2        432
+
+Saved test images to ../data/simulated/fig6abcd.mat
+
+=== Section 6: Unthinned Sobel (v1) ===
+Fig6a  FN=63 FP=3984 TPR=75.4%
+Fig6b  FN=1 FP=437 TPR=99.6%
+Fig6c  FN=215 FP=1246 TPR=16.0%
+Fig6d  bound=75.8% bright=0.0% dark=87.5% FP=3465
+Thinned Sobel, LoG and Canny: run classical_baselines.m
+
+=== Section 7: Regression check against v1 ===
+  [regression] PASS: 12 match, 0 differ, 0 missing  (..\results\tables\results_table.csv)
+  [regression] PASS: 4 match, 0 differ, 0 missing  (..\results\tables\results_fig6d.csv)
+
+REGRESSION PASSED. Results saved to ../results/tables

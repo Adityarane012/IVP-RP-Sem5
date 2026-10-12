@@ -1,0 +1,11 @@
+Variant,Morph,BoundaryTPR,BrightTPR,DarkTPR,FP
+fixed-14,none,100,99.609375,90.625000,363
+fixed-14,open-5,100,99.609375,33.203125,6
+fixed-14,open-10,100,99.609375,8.203125,0
+fixed-14,open-20,100,97.265625,0,0
+fixed-14,close+open10,100,100,43.750000,39
+intersection,none,100,99.218750,91.796875,344
+intersection,open-5,100,99.218750,21.484375,8
+intersection,open-10,100,99.218750,6.640625,2
+intersection,open-20,100,94.921875,0,1
+intersection,close+open10,100,100,51.953125,59
